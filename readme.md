@@ -9,7 +9,7 @@ A JWT based authentication template.
 
 # Setup
 1. Run `yarn` command
-2. Run `npm run nodemon` command
+2. Run `yarn run nodemon` command
 
 # Note
 - Local API url is `http://localhost:3001/v1/`
