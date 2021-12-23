@@ -22,6 +22,13 @@ const signUp = async (req, res) => {
   )
 
   try {
+    const userExist = await User.exists({ firstName: req.body.email })
+    if (userExist) {
+      return res.json({
+        status: false,
+        message: 'User already exist!',
+      })
+    }
     const user = new User({
       email: req.body.email,
       password: req.body.password,
